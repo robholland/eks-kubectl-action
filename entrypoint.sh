@@ -43,7 +43,7 @@ fi
 
 debug "${output}"
 
-if [ -n "${GITHUB_OUTPUT}" ]; then
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
   delimiter=$(mktemp -u XXXXXX)
 
   echo "kubectl-out<<${delimiter}" >> $GITHUB_OUTPUT
